@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ .A{
+   
+    margin-top: 10%;
+    width: 34.4%;
+    margin-left:33% ;
+    border: 2px solid blue;
+    height: 300Px;
+    position: relative;
+   
+    
+  
+ }
+ .b{
+    margin-top: 10px;
+   text-align: center;   
+   cursor: pointer; 
+      
+ }
+#ab{
+    font-size: 50pt;
+    position: absolute;
+     top: 0px;
+     margin-left: 50%;
+
+}
+ 
+
+  
+</style>
+<body>
+       
+  <div class="A">
+   
+    <img src="n1.jpg.avif" alt="" height="300" width="505">
+    <p id="ab">1</p>
+    <div class="b" onclick="Next()">Next</div> 
+</div>
+   
+   
+   <script>
+    
+    
+     var photos = ["n1.jpg.avif","n2.avif","n3.avif","n4.avif"];
+     var imgTag = document.querySelector("img");
+    
+
+     var i = 0;
+     
+
+     function Next(){
+        i ++;
+
+
+        if(i >=photos.length){
+            i =0 ;
+            imgTag.src = photos[i ];
+          
+        }else{
+            imgTag.src = photos[i ];
+          
+        }
+
+        document.getElementById("ab").innerHTML = i+1;
+       
+     }
+
+    
+
+      
+ </script>
+</body>
+</html>
